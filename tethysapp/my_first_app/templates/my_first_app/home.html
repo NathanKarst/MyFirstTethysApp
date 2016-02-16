@@ -1,0 +1,19 @@
+{% extends "my_first_app/base.html" %}
+
+{% block app_navigation_items %}
+  <li><a href="{% url 'my_first_app:home' %}">Home</a></li>
+  <li><a href="{% url 'my_first_app:setup' %}">Setup</a></li>
+    <li><a href="{% url 'my_first_app:results' %}">Results</a></li>
+{% endblock %}
+
+
+{% block app_content %}
+  <h1>Welcome!</h1>
+  <p>Congratulations on creating a new Tethys app!</p>
+  <p>Change!</p>
+{% endblock %}
+
+{% block app_actions %}
+  <a href="" class="btn btn-default">Next</a>
+  <a href="" class="btn btn-default">Back</a>
+{% endblock %}

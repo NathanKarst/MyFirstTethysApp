@@ -1,0 +1,25 @@
+{% extends "my_first_app/home.html" %}
+{% load tethys_gizmos %}
+
+{% block app_content %}
+    <form method="post">
+    {% csrf_token %}
+    {% gizmo text_input gages %}
+    {% gizmo date_picker start %}
+    {% gizmo date_picker stop %}
+    {% gizmo button_group buttons %}
+    </form>
+    
+    {% if line_plot_view %}
+        {% gizmo plot_view line_plot_view %}
+        {% gizmo plot_view scatter_plot_view %}
+    {% endif %}    
+    
+{% endblock %}
+
+
+
+{% block app_actions %}
+  <a href="" class="btn btn-default">Next</a>
+  <a href="" class="btn btn-default">Back</a>
+{% endblock %}
